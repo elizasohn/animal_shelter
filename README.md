@@ -34,17 +34,17 @@
 
 ## Description
 
-_A mock store database including a one-to-many relationship between Products and Reviews. Users are able to log in and are able to add reviews to products. Users with Admin privileges are able to create, read, update, and delete products.
+_A mock API for a local animal shelter listing the available cats and dogs.
 
 ## Setup/Installation Requirements
 
-* _In terminal type "git clone https://github.com/eliza85/admin_store"_
-* _Navigate into directory by typing "admin_store"_
+* _In terminal type "git clone https://github.com/eliza85/animal_shelter"_
+* _Navigate into directory by typing "cd animal_shelter"_
 * _Type "bundle install" to bundle gems_
+* _Type "rake db:create" to create databases_
 * _Type "rails s" to run on local server_
+* _Type "rails c" to try out on rails console_
 * _Enter "localhost:3000" (or whatever numbers terminal supplies) into web browser to run locally_
-* _Create an account with or without admin privileges_
-* _Explore site_
 * _Enjoy_
 
 ## Known Bugs
