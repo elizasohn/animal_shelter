@@ -38,4 +38,8 @@ class AnimalsController < ApplicationController
     def animal_params
         params.permit(:name, :breed, :age)
     end
+
+    def json_response(object, status = :ok)
+      render json: object, status: status
+    end
 end
