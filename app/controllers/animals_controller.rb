@@ -36,7 +36,7 @@ class AnimalsController < ApplicationController
     private
 
     def animal_params
-        params.permit(:name, :breed, :age)
+        params.permit(:name, :kind, :breed, :age)
     end
 
     def json_response(object, status = :ok)
