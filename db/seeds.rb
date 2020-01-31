@@ -8,7 +8,7 @@ class Seed
 
     private
     def self.e
-        Review.destroy_all
+        Animal.destroy_all
     end
 
     def self.generate_animals(count)
@@ -26,7 +26,7 @@ class Seed
                 age: Faker::Number.between(from: 1, to: 14)
             )
         end
-        puts "  Created #{Animal.count} cats and #{Animal.count} dogs."
+        puts "  Created #{Animal.count} cats and dogs."
     end
 end
 
