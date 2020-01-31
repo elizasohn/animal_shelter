@@ -37,19 +37,19 @@ describe 'POST /animals', :type => :request do
       expect(response).to have_http_status 201
     end
   end
-end
 
-#   context '(bad request)' do
-#     before do
-#       post '/animals', params: { :name => '', :kind => '', :breed => '', :age => '' }
-#     end
-#
-#     it 'returns a detailed error message' do
-#       expect(JSON.parse(response.body)['message']).to eq 'Validation failed: Name can\'t be blank, Kind can\'t be blank, Breed can\'t be blank, Age can\'t be blank'
-#     end
-#
-#     it 'returns status code 422 if validations fail' do
-#       expect(response).to have_http_status 422
-#     end
-#   end
-# end
+
+  context '(bad request)' do
+    before do
+      post '/animals', params: { :name => '', :kind => '', :breed => '', :age => '' }
+    end
+
+    it 'returns a detailed error message' do
+      expect(JSON.parse(response.body)['message']).to eq 'Validation failed: Name can\'t be blank, Kind can\'t be blank, Breed can\'t be blank, Age can\'t be blank'
+    end
+
+    it 'returns status code 422 if validations fail' do
+      expect(response).to have_http_status 422
+    end
+  end
+end 
