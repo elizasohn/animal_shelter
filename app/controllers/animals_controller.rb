@@ -33,6 +33,11 @@ class AnimalsController < ApplicationController
         end
     end
 
+    def random
+      @animal = Animal.find(rand(40))
+      json_response(@animal)
+    end 
+
     private
 
     def animal_params
