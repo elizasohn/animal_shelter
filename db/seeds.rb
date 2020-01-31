@@ -14,14 +14,16 @@ class Seed
     def self.generate_animals(count)
         count.times do |i|
             animal = Animal.create!(
-                name: Faker::Creature::Cat.name,
+                name: Faker::Creature::Cat.unique.name,
+                kind: 'cat',
                 breed: Faker::Creature::Cat.breed,
                 age: Faker::Number.between(from: 1, to: 14)
             )
         end
         count.times do |i|
             animal = Animal.create!(
-                name: Faker::Creature::Dog.name,
+                name: Faker::Creature::Dog.unique.name,
+                kind: 'dog',
                 breed: Faker::Creature::Dog.breed,
                 age: Faker::Number.between(from: 1, to: 14)
             )
