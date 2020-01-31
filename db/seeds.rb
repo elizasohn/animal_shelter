@@ -26,7 +26,7 @@ class Seed
                 age: Faker::Number.between(from: 1, to: 14)
             )
         end
-        puts "  Created #{Review.count} cats and #{Review.count} dogs."
+        puts "  Created #{Animal.count} cats and #{Animal.count} dogs."
     end
 end
 
