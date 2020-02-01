@@ -50,7 +50,7 @@ class AnimalsController < ApplicationController
     def search
       if params[:search]
         @animals = @animals.search(params[:search])
-      end 
+      end
       json_response(@animals)
     end
 

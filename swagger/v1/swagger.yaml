@@ -1,0 +1,76 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/animals":
+    post:
+      summary: Creates an animal
+      tags:
+      - Animals
+      consumes:
+      - application/json
+      - application/xml
+      parameters:
+      - name: animal
+        in: body
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            kind:
+              type: string
+            breed:
+              type: string
+            age:
+              type: integer
+          required:
+          - name
+          - kind
+          - breed
+          - age
+      responses:
+        '201':
+          description: animal created
+        '422':
+          description: invalid request
+  "/animals/{id}":
+    get:
+      summary: Retrieves an animal
+      tags:
+      - Animals
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: animal found
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              kind:
+                type: string
+              breed:
+                type: string
+              age:
+                type: integer
+            required:
+            - name
+            - kind
+            - breed
+            - age
+        '404':
+          description: animal not found
+        '406':
+          description: unsupported accept header
