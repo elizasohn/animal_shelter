@@ -53,11 +53,6 @@ describe 'Animal Shelter API' do
         let(:id) { 'invalid' }
         run_test!
       end
-
-      response '406', 'unsupported accept header' do
-        let(:'Accept') { 'application/fuzzworth' }
-        run_test!
-      end
     end
   end
 end

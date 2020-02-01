@@ -17,8 +17,8 @@ require 'simplecov'
 
 SimpleCov.start do
     add_filter 'rails_helper.rb'
-    add_filter '/spec/requests'
-    add_filter '/requests/'
+    add_filter 'app/spec/requests'
+    add_filter 'app/models/concerns/response.rb'
 end
 
 RSpec.configure do |config|
