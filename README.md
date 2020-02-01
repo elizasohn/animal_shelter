@@ -61,6 +61,12 @@ A mock API for a local animal shelter listing the available cats and dogs.
 - **/animals/:id** will update a parameter or parameters of an animal
 
 
+## Swagger Documentation
+_Navigate to http://localhost:3000/api-docs/index.html to view Swagger Documentation_
+
+## SimpleCov
+_Navigate to coverage folder and open index.html in a browser to view test coverage. Running rspec will regenerate file._
+
 ## Known Bugs
 
 * _No known bugs_
