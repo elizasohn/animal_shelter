@@ -49,16 +49,16 @@ A mock API for a local animal shelter listing the available cats and dogs.
 
 ## Endpoints
 
-###GET (All and By ID)_
-- /animals returns all animals and their parameters (id, name, kind, breed, and age)
-- /animals/:id returns an animal and its parameters matching the id
-- /animals/random will return a random animal and its parameters
-###DELETE
-- /animals/:id will delete an animal and its parameters matching the id
-###POST
-- /animals will create an animal and add it to the database
-###PUT
-- /animals/:id will update a parameter or parameters of an animal
+### GET (All and By ID)_
+- **/animals** returns all animals and their parameters (id, name, kind, breed, and age)
+- **/animals/:id** returns an animal and its parameters matching the id
+- **/animals/random** will return a random animal and its parameters
+### DELETE
+- **/animals/:id** will delete an animal and its parameters matching the id
+### POST
+- **/animals** will create an animal and add it to the database
+### PUT
+- **/animals/:id** will update a parameter or parameters of an animal
 
 
 ## Known Bugs
