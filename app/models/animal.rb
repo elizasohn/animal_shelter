@@ -3,4 +3,6 @@ class Animal < ApplicationRecord
   validates :kind, presence: true
   validates :breed, presence: true
   validates :age, presence: true
+
+  scope :search, -> (breed_parameter) { where("breed like ?", "%#{breed_parameter}%")}
 end

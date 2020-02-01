@@ -34,7 +34,7 @@
 
 ## Description
 
-_A mock API for a local animal shelter listing the available cats and dogs.
+A mock API for a local animal shelter listing the available cats and dogs.
 
 ## Setup/Installation Requirements
 
@@ -46,6 +46,20 @@ _A mock API for a local animal shelter listing the available cats and dogs.
 * _Type "rails c" to try out on rails console_
 * _Enter "localhost:3000" (or whatever numbers terminal supplies) into web browser to run locally_
 * _Enjoy_
+
+## Endpoints
+
+###GET (All and By ID)_
+- /animals returns all animals and their parameters (id, name, kind, breed, and age)
+- /animals/:id returns an animal and its parameters matching the id
+- /animals/random will return a random animal and its parameters
+###DELETE
+- /animals/:id will delete an animal and its parameters matching the id
+###POST
+- /animals will create an animal and add it to the database
+###PUT
+- /animals/:id will update a parameter or parameters of an animal
+
 
 ## Known Bugs
 

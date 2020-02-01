@@ -6,8 +6,12 @@ class AnimalsController < ApplicationController
     end
 
     def show
-        @animal = Animal.find(params[:id])
-        json_response(@animal)
+      if params[:search]
+        @animals = @animals.search(params[:search])
+      else
+        @animals = Animal.find(params[:id])
+      end
+      json_response(@animals)
     end
 
     def create
@@ -36,7 +40,19 @@ class AnimalsController < ApplicationController
     def random
       @animal = Animal.find(rand(40))
       json_response(@animal)
-    end 
+    end
+
+    # def search
+    #   @animals = @animals.search(params[:search]) if params[:search].present?
+    #   # Animal.all.where("breed LIKE ?", params[:query])
+    #   json_response(@animals)
+    # end
+    def search
+      if params[:search]
+        @animals = @animals.search(params[:search])
+      end 
+      json_response(@animals)
+    end
 
     private
 
