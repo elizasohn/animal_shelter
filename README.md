@@ -49,7 +49,7 @@ A mock API for a local animal shelter listing the available cats and dogs.
 
 ## Endpoints
 
-### GET (All and By ID)_
+### GET (All and By ID)
 - **/animals** returns all animals and their parameters (id, name, kind, breed, and age)
 - **/animals/:id** returns an animal and its parameters matching the id
 - **/animals/random** will return a random animal and its parameters
