@@ -1,16 +1,16 @@
 class AnimalsController < ApplicationController
 
     def index
+      if params[:search]
+        @animals = @animals.search(params[:search])
+      else
         @animals = Animal.all
+      end
         json_response(@animals)
     end
 
     def show
-      if params[:search]
-        @animals = @animals.search(params[:search])
-      else
-        @animals = Animal.find(params[:id])
-      end
+      @animals = Animal.find(params[:id])
       json_response(@animals)
     end
 
@@ -47,12 +47,12 @@ class AnimalsController < ApplicationController
     #   # Animal.all.where("breed LIKE ?", params[:query])
     #   json_response(@animals)
     # end
-    def search
-      if params[:search]
-        @animals = @animals.search(params[:search])
-      end
-      json_response(@animals)
-    end
+    # def search
+    #   if params[:search]
+    #     @animals = @animals.search(params[:search])
+    #   end
+    #   json_response(@animals)
+    # end
 
     private
 
